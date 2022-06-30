@@ -1,9 +1,18 @@
 import React from 'react';
+// import TextField from './components/TextField';
+import { Counter } from './components/Counter';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      hello from app!
+      <Counter>
+        {(count, setCount) => (
+        <div>
+          {count}
+          <button onClick={() => setCount(count + 1)}>+</button>
+        </div>
+        )}
+      </Counter>
     </div>
   );
 }
